@@ -56,7 +56,8 @@ const ProductCard = (props) => {
                 <div className="card-img-1">
                   <img
                     // src={require("../../../assets/img/hazelnut-latte.webp")}
-                    src={`http://localhost:3000/uploads/images/${img}`}
+                    // src={`http://localhost:3000/uploads/images/${img}`}
+                    src={`https://kopikuu.vercel.app/uploads/images/${img}`}
                     className="rounded-full"
                     alt=""
                   />
