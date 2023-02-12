@@ -45,7 +45,8 @@ export default function Promo() {
                 className="flex items-center bg-[#88B788] rounded-lg w-[80%] px-3 py-3"
               >
                 <img
-                  src={`http://localhost:3000/uploads/images/${item.avatar}`}
+                  // src={`http://localhost:3000/uploads/images/${item.avatar}`}
+                  src={`https://kopikuu.vercel.app/uploads/images/${item.avatar}`}
                   alt=""
                 />
                 <div>
