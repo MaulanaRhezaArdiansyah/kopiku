@@ -11,10 +11,10 @@ const ContentProduct = () => {
   useEffect(() => {
     axios
       .get(
-        // `http://localhost:3001/api/v1/${process.env.REACT_APP_PRODUCT_EP}`
-        `http://localhost:3001/api/v1/${process.env.REACT_APP_PRODUCT_EP}${
-          keyword && `?search=${keyword}`
-        }`
+        // `https://cheerful-overalls-fawn.cyclic.app/api/v1/${process.env.REACT_APP_PRODUCT_EP}`
+        `https://cheerful-overalls-fawn.cyclic.app/api/v1/${
+          process.env.REACT_APP_PRODUCT_EP
+        }${keyword && `?search=${keyword}`}`
       )
       .then((res) => setDataProduct(res.data.data))
       // .then((res) => console.log(res.data.data[0].images[0].filename))
@@ -188,7 +188,7 @@ const ContentProduct = () => {
                         <img
                           src={
                             item.images.length > 0
-                              ? `http://localhost:3001/uploads/images/${item.images[0].filename}`
+                              ? `https://cheerful-overalls-fawn.cyclic.app/uploads/images/${item.images[0].filename}`
                               : ""
                           }
                           alt=""

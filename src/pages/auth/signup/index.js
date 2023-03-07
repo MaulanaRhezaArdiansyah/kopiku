@@ -25,7 +25,7 @@ const Signup = () => {
     e.preventDefault();
     axios({
       method: "POST",
-      url: `http://localhost:3001/api/v1/auth/register`,
+      url: `https://cheerful-overalls-fawn.cyclic.app/api/v1/auth/register`,
       data: signupData,
     })
       .then((res) => {

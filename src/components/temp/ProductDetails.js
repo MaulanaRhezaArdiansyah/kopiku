@@ -27,8 +27,8 @@ const ContentProductDetails = () => {
   useEffect(() => {
     axios
       .get(
-        // `http://localhost:3001/api/v1/${process.env.REACT_APP_PRODUCT_EP}`
-        `http://localhost:3001/api/v1/${process.env.REACT_APP_PRODUCT_EP}/${productId}`
+        // `https://cheerful-overalls-fawn.cyclic.app/api/v1/${process.env.REACT_APP_PRODUCT_EP}`
+        `https://cheerful-overalls-fawn.cyclic.app/api/v1/${process.env.REACT_APP_PRODUCT_EP}/${productId}`
       )
       // .then((res) => console.log(res.data.data))
       .then((res) => {
@@ -59,8 +59,8 @@ const ContentProductDetails = () => {
           <div className="max-sm:flex flex-col max-sm:h-[80vh]">
             <div className=" w-full h-[60vh] flex justify-center items-center max-sm:px-5 ">
               <img
-                // src={`http://localhost:3001/uploads/images/${dataProductDetails.images? dataProductDetails.images[0].filename: ""}`}
-                src={`http://localhost:3001/uploads/images/${dataProductDetails.images[0].filename}`}
+                // src={`https://cheerful-overalls-fawn.cyclic.app/uploads/images/${dataProductDetails.images? dataProductDetails.images[0].filename: ""}`}
+                src={`https://cheerful-overalls-fawn.cyclic.app/uploads/images/${dataProductDetails.images[0].filename}`}
                 alt=""
                 className="h-full max-sm:w-72 max-sm:h-72 rounded-full"
               />
@@ -210,8 +210,8 @@ const ContentProductDetails = () => {
             <div className="w-24 lg:h-full flex items-center justify-center">
               <img
                 // 2 ways for call images
-                src={`http://localhost:3001/uploads/images/${dataProductDetails.images[0].filename}`}
-                // src={`http://localhost:3001/uploads/images/${dataProductDetails.images ? dataProductDetails.images[0].filename : ""}`}
+                src={`https://cheerful-overalls-fawn.cyclic.app/uploads/images/${dataProductDetails.images[0].filename}`}
+                // src={`https://cheerful-overalls-fawn.cyclic.app/uploads/images/${dataProductDetails.images ? dataProductDetails.images[0].filename : ""}`}
                 alt=""
                 className="rounded-full"
               />

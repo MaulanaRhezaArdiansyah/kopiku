@@ -25,7 +25,7 @@ export const ImageCard = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/v1/users/${userID}`)
+      .get(`https://cheerful-overalls-fawn.cyclic.app/api/v1/users/${userID}`)
       .then((res) => {
         // console.log(res.data.data);
         setDataImageCard(res.data.data);

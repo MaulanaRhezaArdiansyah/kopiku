@@ -28,7 +28,7 @@ const AddressDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/v1/users/${userID}`)
+      .get(`https://cheerful-overalls-fawn.cyclic.app/api/v1/users/${userID}`)
       .then((res) => {
         console.log(res.data.data);
         setDataAddress(res.data.data);
@@ -42,7 +42,7 @@ const AddressDetails = () => {
   //   e.preventDefault();
   //   axios({
   //     method: "PATCH",
-  //     url: `http://localhost:3001/api/v1/users/a7db555c-2e3f-4112-8a74-55fa73271400`,
+  //     url: `https://cheerful-overalls-fawn.cyclic.app/api/v1/users/a7db555c-2e3f-4112-8a74-55fa73271400`,
   //     data: dataAddress,
   //   })
   //     .then((res) => {
