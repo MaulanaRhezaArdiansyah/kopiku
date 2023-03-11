@@ -2,9 +2,9 @@
   Kopiku App using <a href="https://reactjs.org/">React.js</a>
 </h1>
 
-<h3 align="center">
+<p align="center">
   Kopiku is a coffee shop application to make it easier for you in choosing your moodbooster.
-</h3>
+</p>
 
 
 ## Techonologies used
