@@ -16,11 +16,11 @@
 - <a href="http://www.cyclic.sh/">Cyclic.sh</a>
 * [![React][React.js]][React-url]
 * [![Express][Express.js]][Express-url]
-* [![Supabase][React.js]][React-url]
-* [![Cyclic][Express.js]][Express-url]
-* [![Vercel][React.js]][React-url]
-* [![PostgreSQL][Express.js]][Express-url]
-* [![Postman][React.js]][React-url]
+* [![Supabase][Supabase]][Supabase-url]
+* [![Cyclic][Cyclic]][Cyclic-url]
+* [![Vercel][Vercel]][Vercel-url]
+* [![PostgreSQL][PostgreSQL]][PostgreSQL-url]
+* [![Postman][Postman]][Postman-url]
 
 ## Screenshot
 
