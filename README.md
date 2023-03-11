@@ -92,7 +92,7 @@ Project Link: [https://github.com/MaulanaRhezaArdiansyah/kopiku](https://github.
 [Express-url]: https://expressjs.com/
 [Supabase]: https://img.shields.io/badge/Supabase-20232A?style=for-the-badge&logo=supabase&logoColor=61DAFB
 [Supabase-url]: https://supabase.com/
-[Cyclic]: https://img.shields.io/badge/Cyclic-20232A?style=for-the-badge&logo=cyclic&logoColor=61DAFB
+[Cyclic]: https://img.shields.io/badge/Cyclic.sh-20232A?style=for-the-badge&logo=cyclic.sh&logoColor=61DAFB
 [Cyclic-url]: http://www.cyclic.sh/
 [Vercel]: https://img.shields.io/badge/Vercel-20232A?style=for-the-badge&logo=vercel&logoColor=61DAFB
 [Vercel-url]: https://vercel.com/
