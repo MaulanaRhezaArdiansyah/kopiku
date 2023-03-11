@@ -1,5 +1,5 @@
 <h1 align="center">
-  Kopiku App using <a href="https://reactjs.org/">React.js</a>
+  Kopiku App using <a href="https://reactjs.org/" name="readme-top">React.js</a>
 </h1>
 
 <p align="center">
@@ -74,7 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Contact
 
-Maulana Rheza Ardiansyah - [@](https://instagram.com/rhezaardiansyahhhh) - rhezaardiansyah222@gmail.com
+Maulana Rheza Ardiansyah - [@rhezaardiansyahhhh](https://instagram.com/rhezaardiansyahhhh) - rhezaardiansyah222@gmail.com
 
 Project Link: [https://github.com/MaulanaRhezaArdiansyah/kopiku](https://github.com/MaulanaRhezaArdiansyah/kopiku)
 
