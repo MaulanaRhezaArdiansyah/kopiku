@@ -9,8 +9,6 @@
 
 ## Techonologies used
 
-- <a href="https://reactjs.org/">React.js</a>
-- <a href="https://expressjs.com/">Express.js</a>
 - <a href="https://www.postgresql.org/">PostgreSQL</a>
 - <a href="https://www.postman.com/">Postman</a>
 - <a href="https://vercel.com/">Vercel</a>
@@ -18,6 +16,11 @@
 - <a href="http://www.cyclic.sh/">Cyclic.sh</a>
 * [![React][React.js]][React-url]
 * [![Express][Express.js]][Express-url]
+* [![Supabase][React.js]][React-url]
+* [![Cyclic][Express.js]][Express-url]
+* [![Vercel][React.js]][React-url]
+* [![PostgreSQL][Express.js]][Express-url]
+* [![Postman][React.js]][React-url]
 
 ## Screenshot
 
@@ -87,3 +90,13 @@ Project Link: [https://github.com/MaulanaRhezaArdiansyah/kopiku](https://github.
 [React-url]: https://reactjs.org/
 [Express.js]: https://img.shields.io/badge/Express.js-20232A?style=for-the-badge&logo=express&logoColor=61DAFB
 [Express-url]: https://expressjs.com/
+[Supabase]: https://img.shields.io/badge/Supabase-20232A?style=for-the-badge&logo=supabase&logoColor=61DAFB
+[Supabase-url]: https://supabase.com/
+[Cyclic]: https://img.shields.io/badge/Cyclic-20232A?style=for-the-badge&logo=cyclic&logoColor=61DAFB
+[Cyclic-url]: http://www.cyclic.sh/
+[Vercel]: https://img.shields.io/badge/Vercel-20232A?style=for-the-badge&logo=vercel&logoColor=61DAFB
+[Vercel-url]: https://vercel.com/
+[PostgreSQL]: https://img.shields.io/badge/PostgreSQL-20232A?style=for-the-badge&logo=postgresql&logoColor=61DAFB
+[PostgreSQL-url]: https://www.postgresql.org/
+[Postman]: https://img.shields.io/badge/Postman-20232A?style=for-the-badge&logo=postman&logoColor=61DAFB
+[Postman-url]: https://www.postman.com/
