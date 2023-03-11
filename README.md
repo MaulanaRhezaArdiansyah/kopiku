@@ -1,6 +1,22 @@
-### Kopiku App
+<h1 align="center">
+  Kopiku App using <a href="https://reactjs.org/">React.js</a>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Kopiku is a coffee shop application to make it easier for you in choosing your moodbooster.
+
+## Techonologies used
+
+- <a href="https://reactjs.org/">React.js</a>
+- <a href="https://expressjs.com/">Express.js</a>
+- <a href="https://www.postgresql.org/">PostgreSQL</a>
+- <a href="https://www.postman.com/">Postman</a>
+- <a href="https://vercel.com/">Vercel</a>
+- <a href="https://supabase.com/">Supabase</a>
+- <a href="http://www.cyclic.sh/">Cyclic.sh</a>
+
+## Screenshot
+
+![screenshot](https://kopiku.cyclic.app/uploads/images/kopiku-landing.png)
 
 ## Available Scripts
 
