@@ -16,8 +16,8 @@
 - <a href="https://vercel.com/">Vercel</a>
 - <a href="https://supabase.com/">Supabase</a>
 - <a href="http://www.cyclic.sh/">Cyclic.sh</a>
-- [![React][React.js]][React-url]
-- [![Express][Express.js]][Express-url]
+* [![React][React.js]][React-url]
+* [![Express][Express.js]][Express-url]
 
 ## Screenshot
 
