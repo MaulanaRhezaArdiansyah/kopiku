@@ -83,7 +83,7 @@ Project Link: [https://github.com/MaulanaRhezaArdiansyah/kopiku](https://github.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LINK -->
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React.js]: https://img.shields.io/badge/React.js-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Express.js]: https://img.shields.io/badge/Express-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[Express.js]: https://img.shields.io/badge/Express.js-20232A?style=for-the-badge&logo=express&logoColor=61DAFB
 [Express-url]: https://expressjs.com/
