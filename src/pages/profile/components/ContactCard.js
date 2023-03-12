@@ -3,23 +3,16 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
-export const ContactCard = () => {
+export const ContactCard = ({ datas, setData }) => {
   const [dataContact, setDataContact] = useState([
     {
-      birthday: "",
       delivery_address: "",
       email: "",
-      firstname: "",
-      gender: "",
       id: "",
-      image: "",
-      lastname: "",
-      password: "",
       phone: "",
-      role: "",
-      username: "",
     },
   ]);
+  // console.log(datas);
 
   const userLogin = JSON.parse(localStorage.getItem("@userLogin"));
   const userID = userLogin.user.id;
@@ -37,7 +30,7 @@ export const ContactCard = () => {
   }, []);
 
   return (
-    <form className="contact-card bg-white w-full lg:w-[60%] h-[22rem] rounded-lg border-b-[10px] border-[#6A4029] flex flex-col gap-5 px-8 py-4">
+    <div className="contact-card bg-white w-full lg:w-[60%] h-[22rem] rounded-lg border-b-[10px] border-[#6A4029] flex flex-col gap-5 px-8 py-4">
       <div className="flex justify-between">
         <h3 className="text-2xl font-bold text-[#4F5665]">Contacts</h3>
       </div>
@@ -50,6 +43,12 @@ export const ContactCard = () => {
           name="email"
           className="bg-transparent border-b-[1px] border-black focus:outline-none text-black"
           placeholder={dataContact.email}
+          onChange={(e) =>
+            setData({
+              ...datas,
+              email: e.target.value,
+            })
+          }
         />
       </div>
       <div className="flex flex-col gap-2 text-lg">
@@ -61,6 +60,12 @@ export const ContactCard = () => {
           name="phone"
           className="bg-transparent border-b-[1px] border-black focus:outline-none text-black"
           placeholder={dataContact.phone}
+          onChange={(e) =>
+            setData({
+              ...datas,
+              phone: e.target.value,
+            })
+          }
         />
       </div>
       <div className="flex flex-col gap-2 text-lg">
@@ -72,8 +77,14 @@ export const ContactCard = () => {
           name="deliveryaddress"
           className="bg-transparent border-b-[1px] border-black focus:outline-none text-black"
           placeholder={dataContact.delivery_address}
+          onChange={(e) =>
+            setData({
+              ...datas,
+              delivery_address: e.target.value,
+            })
+          }
         />
       </div>
-    </form>
+    </div>
   );
 };

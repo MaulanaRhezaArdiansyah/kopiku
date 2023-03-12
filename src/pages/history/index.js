@@ -6,17 +6,11 @@ import { TabTitle } from "../../utils/GeneralFunction";
 
 const History = () => {
   TabTitle(`Kopiku | History`);
-
-  const removeCart = (e) => {
-    e.preventDefault();
-    localStorage.removeItem("@cart");
-    alert("Success deleting your history order!");
-  };
   return (
     <>
       <Navbar titleLogo="Kopiku" />
       <main
-        className="flex flex-col w-full h-[300vh] lg:h-[150vh] pt-10 bg-cover bg-no-repeat bg-center bg-fixed lg:pt-36 max-sm:pt-36"
+        className="flex flex-col w-full h-[300vh] lg:h-[150vh] pt-10 md:pt-40 bg-cover bg-no-repeat bg-center bg-fixed lg:pt-36 max-sm:pt-36"
         style={{ backgroundImage: `url(${backgroundHistory})` }}
       >
         <section className="text-white w-full items-center text-center px-2">
@@ -28,21 +22,12 @@ const History = () => {
         <section className="flex flex-col h-[100vh] w-full px-5 mt-16 lg:px-32">
           <div className="flex justify-end gap-x-3 lg:gap-x-5">
             <button
-              // onClick={() => {
-              //   console.log("ok");
-              // }}
-              onClick={removeCart}
-              className="text-end text-white text-lg font-bold mb-3"
-            >
-              Delete
-            </button>
-            <button
               onClick={() => {
                 console.log("ok");
               }}
               className="text-end text-white text-lg font-bold mb-3 lg:pr-12"
             >
-              Select all
+              Delete all
             </button>
           </div>
           <HistoryCard />

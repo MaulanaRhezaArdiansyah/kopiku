@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  // const number = "12";
-  // const parse = () => {
-  //   parseInt(number);
-  // };
   return (
-    <footer className="flex w-full h-[100vh] md:h-[70vh] lg:h-[90vh] pt-20 bg-slate-100 max-sm:h-[20%] max-sm:flex-col max-sm:pt-5">
+    <footer className="flex w-full h-[100vh] md:h-[50vh] lg:h-[90vh] pt-20 bg-slate-100 max-sm:h-[20%] max-sm:flex-col max-sm:pt-5">
       <section className="w-7/12 max-sm:w-full h-full max-sm:h-[40%]">
         <section className="footer-about w-4/6 h-full flex flex-col gap-y-5 pt-24 pl-20 max-sm:pt-5 max-sm:pl-5">
           <Link to="/" className="flex items-center gap-x-2">
@@ -14,10 +10,6 @@ const Footer = () => {
             <h3 className="text-[#0B132A] font-black text-lg">KopiKu</h3>
           </Link>
 
-          {/* <a href="" className="logo-footer flex items-center gap-x-2">
-            <img src={require("../../assets/img/coffe-logo.webp")} alt="" />
-            <h3 className="text-[#0B132A] font-black text-lg">KopiKu</h3>
-          </a> */}
           <p className="text-[#4F5665] line-height-30 font-semibold leading-8">
             KopiKu is a store that sells some good meals, and especially coffee.
             We provide high quality beans

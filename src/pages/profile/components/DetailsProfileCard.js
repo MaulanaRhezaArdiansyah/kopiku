@@ -3,7 +3,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
-export const DetailsProfileCard = () => {
+export const DetailsProfileCard = ({ datas, setData }) => {
   const [dataDetailsCard, setDataDetailsCard] = useState([
     {
       birthday: "",
@@ -36,10 +36,7 @@ export const DetailsProfileCard = () => {
       });
   }, []);
   return (
-    <form
-      action=""
-      className="details-card bg-white w-full lg:w-[60%] h-[30rem] rounded-lg border-b-[10px] border-[#6A4029] flex flex-col gap-5 px-8 py-4"
-    >
+    <div className="details-card bg-white w-full lg:w-[60%] h-[30rem] rounded-lg border-b-[10px] border-[#6A4029] flex flex-col gap-5 px-8 py-4">
       <div className="flex justify-between">
         <h3 className="text-2xl font-bold text-[#4F5665]">Details</h3>
       </div>
@@ -52,6 +49,12 @@ export const DetailsProfileCard = () => {
           name="displayname"
           className="bg-transparent border-b-[1px] border-black focus:outline-none text-black"
           placeholder={dataDetailsCard.username}
+          onChange={(e) => {
+            setData({
+              ...datas,
+              username: e.target.value,
+            });
+          }}
         />
       </div>
       <div className="flex flex-col gap-2 text-lg">
@@ -59,6 +62,7 @@ export const DetailsProfileCard = () => {
           First name :
         </label>
         <input
+          disabled
           type="text"
           name="firstname"
           className="bg-transparent border-b-[1px] border-black focus:outline-none text-black"
@@ -70,6 +74,7 @@ export const DetailsProfileCard = () => {
           Last name :
         </label>
         <input
+          disabled
           type="text"
           name="lastname"
           className="bg-transparent border-b-[1px] border-black focus:outline-none text-black"
@@ -85,6 +90,12 @@ export const DetailsProfileCard = () => {
           name="birthdate"
           className="bg-transparent border-b-[1px] border-black focus:outline-none text-black"
           placeholder={dataDetailsCard.birthday}
+          onChange={(e) => {
+            setData({
+              ...datas,
+              birthday: e.target.value,
+            });
+          }}
         />
       </div>
       <div className="gender flex text-[#9F9F9F] text-lg gap-3">
@@ -105,6 +116,6 @@ export const DetailsProfileCard = () => {
         />
         <p className="text-lg">Female</p>
       </div>
-    </form>
+    </div>
   );
 };

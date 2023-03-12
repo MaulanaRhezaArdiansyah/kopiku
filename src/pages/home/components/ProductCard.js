@@ -51,12 +51,10 @@ const ProductCard = (props) => {
       <div className="flex justify-center gap-x-10 sm:flex-col sm:items-center sm:gap-y-10 md:flex-col md:items-center md:gap-y-10 max-sm:flex-col max-sm:items-center max-sm:gap-y-10 lg:flex-row lg:justify-center">
         {dataProductCard.map(({ img, title, content, price }) => {
           return (
-            <div className="flex flex-col items-center border-2 rounded-md w-[25%] sm:w-[50%] md:w-[60%] lg:w-[25%] max-sm:w-[90%] h-[600px] justify-around">
+            <div className="flex flex-col items-center border-2 hover:border-[#6A4029] duration-300 rounded-md w-[25%] sm:w-[50%] md:w-[60%] lg:w-[25%] max-sm:w-[90%] h-[600px] justify-around">
               <div className="flex flex-col justify-center items-center gap-y-5">
                 <div className="card-img-1">
                   <img
-                    // src={require("../../../assets/img/hazelnut-latte.webp")}
-                    // src={`http://localhost:3000/uploads/images/${img}`}
                     src={`https://kopikuu.vercel.app/uploads/images/${img}`}
                     className="rounded-full"
                     alt=""

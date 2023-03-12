@@ -38,7 +38,10 @@ export const ImageCard = () => {
     <div className="image-card bg-white w-full lg:w-[40%] h-[22rem] rounded-lg border-b-[10px] border-[#6A4029] flex flex-col gap-4 items-center justify-center py-4">
       <figure className="w-24 h-24 rounded-full">
         <img
-          src={require("../../../assets/img/rheza-profile.webp")}
+          src={
+            dataImageCard.image &&
+            `http://kopiku.cyclic.app/uploads/images/${dataImageCard.image}`
+          }
           alt=""
           className="rounded-full"
         />

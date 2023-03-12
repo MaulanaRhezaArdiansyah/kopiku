@@ -34,7 +34,6 @@ const ProductDetails = () => {
   useEffect(() => {
     axios
       .get(
-        // `https://cheerful-overalls-fawn.cyclic.app/api/v1/${process.env.REACT_APP_PRODUCT_EP}`
         `https://cheerful-overalls-fawn.cyclic.app/api/v1/${process.env.REACT_APP_PRODUCT_EP}/${productId}`
       )
       // .then((res) => console.log(res.data.data))
@@ -49,32 +48,16 @@ const ProductDetails = () => {
   const [order, setOrder] = useState(0);
   const [size, setSize] = useState("");
 
-  // const cart = {
-  //   titleCart: dataProductDetails.title,
-  //   priceCart: dataProductDetails.price,
-  //   imageCart: `https://cheerful-overalls-fawn.cyclic.app/uploads/images/${dataProductDetails.images[0].filename}`,
-  //   orderCart: order,
-  //   sizeCart: size,
-  // };
   const cart = {
     titleCart: dataProductDetails.title,
     priceCart: dataProductDetails.price * order,
     imageCart: `https://cheerful-overalls-fawn.cyclic.app/uploads/images/${dataProductDetails.images[0].filename}`,
     orderCart: order,
     sizeCart: size,
+    product_id: productId,
   };
   // console.log(cart.priceCart);
 
-  // const cart = [
-  //   {
-  //     titleCart: dataProductDetails.title,
-  //     priceCart: dataProductDetails.price,
-  //     imageCart: `https://cheerful-overalls-fawn.cyclic.app/uploads/images/${dataProductDetails.images[0].filename}`,
-  //     orderCart: order,
-  //     sizeCart: size,
-  //   },
-  // ];
-  // console.log(cart);
   // 1 on 1
   // get data cart sebelumnya / yang sudah terinput ke cart
   const carts = JSON.parse(localStorage.getItem("@cart"));
@@ -100,8 +83,9 @@ const ProductDetails = () => {
   return (
     <>
       <Navbar titleLogo="Kopiku" />
+
       <main className="flex max-sm:flex-col md:max-lg:flex-col w-full h-[150vh] md:max-lg:h-[200vh] max-sm:h-[220vh] lg:pt-28 max-sm:pt-28 ">
-        <section className="flex flex-col gap-y-10 w-1/2 h-full max-sm:w-full max-sm:h-[50%] md:max-lg:w-full md:max-lg:h-[50%] md:max-lg:pt-14  lg:pl-32 lg:pr-10 pt-6">
+        <section className="flex flex-col gap-y-10 w-1/2 h-full max-sm:w-full max-sm:h-[50%] md:max-lg:w-full md:max-lg:h-[50%] md:max-lg:pt-40 lg:pl-32 lg:pr-10 pt-6">
           <p className="md:max-lg:pl-10 md:max-lg:text-xl lg:text-lg max-sm:pl-5 text-[#4F5665]">
             Favorite & Promo
             <span className="text-[#6A4029] font-bold">
@@ -121,7 +105,8 @@ const ProductDetails = () => {
             <DelivAndTime />
           </div>
         </section>
-        <section className="max-sm:mt-10 max-sm:px-5 md:max-lg:mt-36 md:max-lg:pt-20 md:max-lg:px-10 flex flex-col gap-y-14 w-1/2 h-full max-sm:w-full md:max-lg:w-full md:max-lg:h-[50%]  lg:pr-32 lg:pl-10 pt-6 lg:pt-28 max-sm:h-[120vh]">
+
+        <section className="max-sm:mt-10 max-sm:px-5 md:max-lg:mt-80 md:max-lg:pt-20 md:max-lg:px-10 flex flex-col gap-y-14 w-1/2 h-full max-sm:w-full md:max-lg:w-full md:max-lg:h-[50%]  lg:pr-32 lg:pl-10 pt-6 lg:pt-28 max-sm:h-[120vh]">
           <div className="flex flex-col gap-y-8 h-[50%] w-full">
             <h2 className="text-5xl font-extrabold text-center pb-4 max-sm:pb-0 md:max-lg:text-7xl">
               {dataProductDetails.title}
@@ -156,7 +141,7 @@ const ProductDetails = () => {
               </div>
             </div>
             <div className="flex justify-between w-full">
-              <div className="flex items-center bg-white md:max-lg:text-2xl w-[30%] h-12 text-[#6A4029] font-bold border-[2px] rounded-md">
+              <div className="flex items-center bg-[#ffffff] md:max-lg:text-2xl w-[30%] h-12 text-[#6A4029] font-bold border-[2px] rounded-md">
                 <input
                   onClick={() =>
                     setOrder((prev) => {
@@ -169,7 +154,7 @@ const ProductDetails = () => {
                   }
                   type="button"
                   value="-"
-                  className="flex items-center justify-center  border-r-[2px] w-[30%] h-full "
+                  className="flex items-center justify-center cursor-pointer border-r-[2px] w-[30%] h-full "
                 />
                 <p className="flex items-center justify-center  border-r-[2px] w-[40%] h-full ">
                   {order}
@@ -182,7 +167,7 @@ const ProductDetails = () => {
                   }
                   type="button"
                   value="+"
-                  className="flex items-center justify-center w-[30%] h-full "
+                  className="flex items-center justify-center cursor-pointer w-[30%] h-full "
                 />
               </div>
               <p className="h-10 text-2xl md:max-lg:text-4xl font-extrabold flex items-center">
@@ -192,17 +177,18 @@ const ProductDetails = () => {
             <div className="w-full flex flex-col gap-y-5 md:max-lg:text-2xl">
               <button
                 onClick={handleAddCart}
-                className="bg-[#6A4029] text-white font-bold py-5 rounded-lg"
+                className="bg-[#6A4029] border-[1px] border-[#6A4029] hover:bg-white  duration-300 text-white hover:text-[#6A4029] font-bold py-5 md:max-lg:py-8 rounded-lg"
               >
                 Add to Cart
               </button>
-              <button className="bg-amber-400 text-[#6A4029] font-bold py-5 rounded-lg">
+              <button className="bg-amber-400 hover:bg-amber-500 duration-300 text-[#6A4029] font-bold py-5 md:max-lg:py-8 rounded-lg">
                 Ask a Staff
               </button>
             </div>
           </div>
         </section>
       </main>
+
       <section className="w-full h-36 relative">
         <div className="absolute max-sm:-top-10 lg:top-16 md:max-lg:top-16 flex gap-x-5 justify-center w-full px-32 max-sm:px-5 md:max-lg:px-10 h-36 max-sm:h-44">
           {/* this is set size in desktop design */}
@@ -254,6 +240,7 @@ const ProductDetails = () => {
           </div>
         </div>
       </section>
+
       <Footer />
     </>
   );
