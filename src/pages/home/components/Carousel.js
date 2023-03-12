@@ -62,10 +62,6 @@ export default function Carousel() {
                 <div className="flex justify-between">
                   <div className="flex">
                     <div>
-                      {console.log(
-                        //   `http://localhost:3000/src/assets/img/${i.avatar}`
-                        `http://localhost:3000/public/${i.avatar}`
-                      )}
                       <img
                         // src={`http://localhost:3000/uploads/images/${i.avatar}`}
                         src={`https://kopikuu.vercel.app/uploads/images/${i.avatar}`}

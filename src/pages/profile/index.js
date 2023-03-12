@@ -22,7 +22,7 @@ export default function Profile() {
     birthday: "",
   });
 
-  const URL = `http://kopiku.cyclic.app/api/v1/users/${userID}`;
+  const URL = `https://kopiku.cyclic.app/api/v1/users/${userID}`;
   // const URL = `http://localhost:3001/api/v1/users/${userID}`;
   const handleEditProfile = (e) => {
     e.preventDefault();

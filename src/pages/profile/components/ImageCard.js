@@ -40,7 +40,7 @@ export const ImageCard = () => {
         <img
           src={
             dataImageCard.image &&
-            `http://kopiku.cyclic.app/uploads/images/${dataImageCard.image}`
+            `https://kopiku.cyclic.app/uploads/images/${dataImageCard.image}`
           }
           alt=""
           className="rounded-full"

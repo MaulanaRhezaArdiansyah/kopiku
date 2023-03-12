@@ -18,10 +18,11 @@ export const ContactCard = ({ datas, setData }) => {
   const userID = userLogin.user.id;
 
   useEffect(() => {
-    axios
-      .get(`https://kopiku.cyclic.app/api/v1/users/${userID}`)
+    axios({
+      method: "GET",
+      url: `https://kopiku.cyclic.app/api/v1/users/${userID}`,
+    })
       .then((res) => {
-        // console.log(res.data.data);
         setDataContact(res.data.data);
       })
       .catch((err) => {
