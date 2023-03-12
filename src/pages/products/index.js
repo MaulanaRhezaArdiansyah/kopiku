@@ -22,7 +22,7 @@ const Product = () => {
   useEffect(() => {
     axios
       .get(
-        `https://cheerful-overalls-fawn.cyclic.app/api/v1/${
+        `https://kopiku.cyclic.app/api/v1/${
           process.env.REACT_APP_PRODUCT_EP
         }?limit=12${keyword ? `&search=${keyword}` : ""}${
           category ? `&cat=${category}` : ""
@@ -139,7 +139,7 @@ const Product = () => {
                           <img
                             src={
                               item.images.length > 0
-                                ? `https://cheerful-overalls-fawn.cyclic.app/uploads/images/${item.images[0].filename}`
+                                ? `https://kopiku.cyclic.app/uploads/images/${item.images[0].filename}`
                                 : ""
                             }
                             alt=""

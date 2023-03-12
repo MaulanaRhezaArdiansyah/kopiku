@@ -26,7 +26,7 @@ export const DetailsProfileCard = ({ datas, setData }) => {
 
   useEffect(() => {
     axios
-      .get(`https://cheerful-overalls-fawn.cyclic.app/api/v1/users/${userID}`)
+      .get(`https://kopiku.cyclic.app/api/v1/users/${userID}`)
       .then((res) => {
         // console.log(res.data.data);
         setDataDetailsCard(res.data.data);

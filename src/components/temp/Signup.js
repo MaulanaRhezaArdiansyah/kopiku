@@ -23,7 +23,7 @@ const ContentSignup = () => {
     e.preventDefault();
     axios({
       method: "POST",
-      url: `https://cheerful-overalls-fawn.cyclic.app/api/v1/auth/register`,
+      url: `https://kopiku.cyclic.app/api/v1/auth/register`,
       data: signupData,
     })
       .then((res) => {
