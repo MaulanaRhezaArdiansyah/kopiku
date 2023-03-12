@@ -20,7 +20,7 @@ export const ContactCard = ({ datas, setData }) => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://kopiku.cyclic.app/api/v1/users/${userID}`,
+      url: `https://kopiku.up.railway.app/api/v1/users/${userID}`,
     })
       .then((res) => {
         setDataContact(res.data.data);
@@ -31,7 +31,7 @@ export const ContactCard = ({ datas, setData }) => {
   }, []);
 
   return (
-    <div className="contact-card bg-white w-full lg:w-[60%] h-[22rem] rounded-lg border-b-[10px] border-[#6A4029] flex flex-col gap-5 px-8 py-4">
+    <div className="contact-card bg-white w-full lg:w-[60%] h-[22rem] rounded-lg border-b-[10px] border-[#6A4029] flex flex-col gap-5 px-8 py-4 md:max-lg:mb-10 max-sm:mb-5">
       <div className="flex justify-between">
         <h3 className="text-2xl font-bold text-[#4F5665]">Contacts</h3>
       </div>

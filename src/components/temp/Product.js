@@ -11,10 +11,10 @@ const ContentProduct = () => {
   useEffect(() => {
     axios
       .get(
-        // `https://kopiku.cyclic.app/api/v1/${process.env.REACT_APP_PRODUCT_EP}`
-        `https://kopiku.cyclic.app/api/v1/${process.env.REACT_APP_PRODUCT_EP}${
-          keyword && `?search=${keyword}`
-        }`
+        // `https://kopiku.up.railway.app/api/v1/${process.env.REACT_APP_PRODUCT_EP}`
+        `https://kopiku.up.railway.app/api/v1/${
+          process.env.REACT_APP_PRODUCT_EP
+        }${keyword && `?search=${keyword}`}`
       )
       .then((res) => setDataProduct(res.data.data))
       // .then((res) => console.log(res.data.data[0].images[0].filename))
@@ -188,7 +188,7 @@ const ContentProduct = () => {
                         <img
                           src={
                             item.images.length > 0
-                              ? `https://kopiku.cyclic.app/uploads/images/${item.images[0].filename}`
+                              ? `https://kopiku.up.railway.app/images/${item.images[0].filename}`
                               : ""
                           }
                           alt=""

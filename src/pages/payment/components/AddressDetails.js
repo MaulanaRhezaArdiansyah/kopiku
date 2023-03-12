@@ -28,7 +28,7 @@ const AddressDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`https://kopiku.cyclic.app/api/v1/users/${userID}`)
+      .get(`https://kopiku.up.railway.app/api/v1/users/${userID}`)
       .then((res) => {
         setDataAddress(res.data.data);
       })
@@ -41,7 +41,7 @@ const AddressDetails = () => {
   //   e.preventDefault();
   //   axios({
   //     method: "PATCH",
-  //     url: `https://kopiku.cyclic.app/api/v1/users/a7db555c-2e3f-4112-8a74-55fa73271400`,
+  //     url: `https://kopiku.up.railway.app/api/v1/users/a7db555c-2e3f-4112-8a74-55fa73271400`,
   //     data: dataAddress,
   //   })
   //     .then((res) => {

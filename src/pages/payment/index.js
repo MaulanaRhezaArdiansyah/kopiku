@@ -10,7 +10,7 @@ import { TabTitle } from "../../utils/GeneralFunction";
 
 const Payment = () => {
   const navigate = useNavigate();
-  const URL = `https://kopiku.cyclic.app/`;
+  const URL = `https://kopiku.up.railway.app/`;
   const carts = JSON.parse(localStorage.getItem("@cart"));
   const userID = JSON.parse(localStorage.getItem("@userLogin")).user.id;
 

@@ -6,20 +6,19 @@
   Kopiku is a coffee shop application to make it easier for you in choosing your moodbooster.
 </p>
 
-
 ## Techonologies used
 
-* [![React][React.js]][React-url]
-* [![Express][Express.js]][Express-url]
-* [![Supabase][Supabase]][Supabase-url]
-* [![Cyclic][Cyclic]][Cyclic-url]
-* [![Vercel][Vercel]][Vercel-url]
-* [![PostgreSQL][PostgreSQL]][PostgreSQL-url]
-* [![Postman][Postman]][Postman-url]
+- [![React][react.js]][react-url]
+- [![Express][express.js]][express-url]
+- [![Supabase][supabase]][supabase-url]
+- [![Cyclic][cyclic]][cyclic-url]
+- [![Vercel][vercel]][vercel-url]
+- [![PostgreSQL][postgresql]][postgresql-url]
+- [![Postman][postman]][postman-url]
 
 ## Screenshot
 
-![screenshot](https://kopiku.cyclic.app/uploads/images/kopiku-landing.png)
+![screenshot](https://kopiku.up.railway.app/images/kopiku-landing.png)
 
 ## Quickstart
 
@@ -81,17 +80,18 @@ Project Link: [https://github.com/MaulanaRhezaArdiansyah/kopiku](https://github.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LINK -->
-[React.js]: https://img.shields.io/badge/React.js-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Express.js]: https://img.shields.io/badge/Express.js-20232A?style=for-the-badge&logo=express&logoColor=61DAFB
-[Express-url]: https://expressjs.com/
-[Supabase]: https://img.shields.io/badge/Supabase-20232A?style=for-the-badge&logo=supabase&logoColor=61DAFB
-[Supabase-url]: https://supabase.com/
-[Cyclic]: https://img.shields.io/badge/Cyclic.sh-20232A?style=for-the-badge&logo=cyclic.sh&logoColor=61DAFB
-[Cyclic-url]: http://www.cyclic.sh/
-[Vercel]: https://img.shields.io/badge/Vercel-20232A?style=for-the-badge&logo=vercel&logoColor=61DAFB
-[Vercel-url]: https://vercel.com/
-[PostgreSQL]: https://img.shields.io/badge/PostgreSQL-20232A?style=for-the-badge&logo=postgresql&logoColor=61DAFB
-[PostgreSQL-url]: https://www.postgresql.org/
-[Postman]: https://img.shields.io/badge/Postman-20232A?style=for-the-badge&logo=postman&logoColor=61DAFB
-[Postman-url]: https://www.postman.com/
+
+[react.js]: https://img.shields.io/badge/React.js-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-url]: https://reactjs.org/
+[express.js]: https://img.shields.io/badge/Express.js-20232A?style=for-the-badge&logo=express&logoColor=61DAFB
+[express-url]: https://expressjs.com/
+[supabase]: https://img.shields.io/badge/Supabase-20232A?style=for-the-badge&logo=supabase&logoColor=61DAFB
+[supabase-url]: https://supabase.com/
+[cyclic]: https://img.shields.io/badge/Cyclic.sh-20232A?style=for-the-badge&logo=cyclic.sh&logoColor=61DAFB
+[cyclic-url]: http://www.cyclic.sh/
+[vercel]: https://img.shields.io/badge/Vercel-20232A?style=for-the-badge&logo=vercel&logoColor=61DAFB
+[vercel-url]: https://vercel.com/
+[postgresql]: https://img.shields.io/badge/PostgreSQL-20232A?style=for-the-badge&logo=postgresql&logoColor=61DAFB
+[postgresql-url]: https://www.postgresql.org/
+[postman]: https://img.shields.io/badge/Postman-20232A?style=for-the-badge&logo=postman&logoColor=61DAFB
+[postman-url]: https://www.postman.com/

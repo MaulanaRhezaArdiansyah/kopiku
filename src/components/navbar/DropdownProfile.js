@@ -57,7 +57,7 @@ export default function DropdownProfile({ isVisible, closeModal, setIsLogin }) {
           onClick={() => {
             localStorage.removeItem("@userLogin");
             setIsLogin(false);
-            navigate("/");
+            navigate("/product");
           }}
           className="w-full py-2 text-center hover:rounded-xl hover:bg-[#fbbf24] duration-150 cursor-pointer"
         >

@@ -7,7 +7,7 @@ const HistoryCard = () => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
   const userID = JSON.parse(localStorage.getItem("@userLogin")).user.id;
-  const URL = `https://kopiku.cyclic.app`;
+  const URL = `https://kopiku.up.railway.app`;
   const [datas, setDatas] = useState([]);
   const [message, setMessage] = useState("");
   const [refetch, setRefetch] = useState(false);

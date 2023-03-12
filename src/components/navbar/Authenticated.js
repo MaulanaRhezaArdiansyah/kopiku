@@ -1,25 +1,45 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import DropdownProfile from "./DropdownProfile";
 
 export default function Authenticated({ setIsLogin, setKeyword, setRefetch }) {
-  const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
 
   const [datas, setDatas] = useState("");
+  const [userID, setUserID] = useState("");
+  const [reget, setReget] = useState(false);
   useEffect(() => {
     const getData = async () => {
       try {
         const response = await localStorage.getItem("@userLogin");
         const data = JSON.parse(response);
-        setDatas(data);
+        const dataID = data.user.id;
+        setUserID(dataID);
       } catch (error) {
         console.log(error);
       }
     };
     getData();
   }, []);
-  const avatar = datas?.user?.image;
+
+  useEffect(() => {
+    const getAvatar = async () => {
+      try {
+        const response = await axios.get(
+          `https://kopiku.up.railway.app/api/v1/users/${userID}`
+        );
+        const data = response.data.data;
+        setReget(!reget);
+        setDatas(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getAvatar();
+  }, [reget, userID]);
+
+  const avatar = datas?.image;
   return (
     <>
       <div className="flex gap-x-3 items-center">
@@ -56,7 +76,7 @@ export default function Authenticated({ setIsLogin, setKeyword, setRefetch }) {
           </button>
         </div>
 
-        <div className="flex items-center gap-x-3 flex">
+        <div className="flex items-center gap-x-3">
           <Link to="/chat">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +100,7 @@ export default function Authenticated({ setIsLogin, setKeyword, setRefetch }) {
           className="w-8 h-8 rounded-full cursor-pointer border-zinc-500 duration-200"
         >
           <img
-            src={avatar && `https://kopiku.cyclic.app/uploads/images/${avatar}`}
+            src={avatar && `https://kopiku.up.railway.app/images/${avatar}`}
             alt=""
             className="rounded-full w-8 h-8"
           />
