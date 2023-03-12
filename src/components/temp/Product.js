@@ -12,7 +12,8 @@ const ContentProduct = () => {
     axios
       .get(
         // `https://kopiku.up.railway.app/api/v1/${process.env.REACT_APP_PRODUCT_EP}`
-        `https://kopiku.up.railway.app/api/v1/${
+        // `https://kopiku.up.railway.app/api/v1/${
+        `${process.env.REACT_APP_URL}/api/v1/${
           process.env.REACT_APP_PRODUCT_EP
         }${keyword && `?search=${keyword}`}`
       )
@@ -188,7 +189,7 @@ const ContentProduct = () => {
                         <img
                           src={
                             item.images.length > 0
-                              ? `https://kopiku.up.railway.app/images/${item.images[0].filename}`
+                              ? `${process.env.REACT_APP_URL}/images/${item.images[0].filename}`
                               : ""
                           }
                           alt=""

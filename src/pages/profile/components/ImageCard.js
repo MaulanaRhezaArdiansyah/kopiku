@@ -15,7 +15,7 @@ export const ImageCard = ({ setAvatar, preview, setPreview }) => {
 
   useEffect(() => {
     axios
-      .get(`https://kopiku.up.railway.app/api/v1/users/${userID}`)
+      .get(`${process.env.REACT_APP_URL}/api/v1/users/${userID}`)
       .then((res) => {
         setRefetch(!refetch);
         setDataImageCard(res.data.data);
@@ -43,7 +43,8 @@ export const ImageCard = ({ setAvatar, preview, setPreview }) => {
               preview
                 ? preview
                 : dataImageCard.image &&
-                  `https://kopiku.up.railway.app/images/${dataImageCard.image}`
+                  // `https://kopiku.up.railway.app/images/${dataImageCard.image}`
+                  `${process.env.REACT_APP_URL}/images/${dataImageCard.image}`
             }
             alt=""
             className="rounded-full"

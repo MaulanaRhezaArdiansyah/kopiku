@@ -24,7 +24,7 @@ const Login = () => {
     e.preventDefault();
     axios({
       method: "POST",
-      url: `https://kopiku.up.railway.app/api/v1/auth/login`,
+      url: `${process.env.REACT_APP_URL}/api/v1/auth/login`,
       data: loginData,
     })
       .then((res) => {

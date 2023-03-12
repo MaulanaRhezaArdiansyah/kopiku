@@ -34,7 +34,7 @@ const ProductDetails = () => {
   useEffect(() => {
     axios
       .get(
-        `https://kopiku.up.railway.app/api/v1/${process.env.REACT_APP_PRODUCT_EP}/${productId}`
+        `${process.env.REACT_APP_URL}/api/v1/${process.env.REACT_APP_PRODUCT_EP}/${productId}`
       )
       // .then((res) => console.log(res.data.data))
       .then((res) => {
@@ -51,7 +51,7 @@ const ProductDetails = () => {
   const cart = {
     titleCart: dataProductDetails.title,
     priceCart: dataProductDetails.price * order,
-    imageCart: `https://kopiku.up.railway.app/images/${dataProductDetails.images[0].filename}`,
+    imageCart: `${process.env.REACT_APP_URL}/images/${dataProductDetails.images[0].filename}`,
     orderCart: order,
     sizeCart: size,
     product_id: productId,
@@ -97,7 +97,7 @@ const ProductDetails = () => {
             <div className=" w-full h-[60vh] flex justify-center items-center max-sm:px-5 ">
               <img
                 // src={`https://kopiku.up.railway.app/images/${dataProductDetails.images? dataProductDetails.images[0].filename: ""}`}
-                src={`https://kopiku.up.railway.app/images/${dataProductDetails.images[0].filename}`}
+                src={`${process.env.REACT_APP_URL}/images/${dataProductDetails.images[0].filename}`}
                 alt=""
                 className="h-full max-sm:w-72 max-sm:h-72 rounded-full"
               />
@@ -213,7 +213,7 @@ const ProductDetails = () => {
             <div className="w-24 lg:h-full flex items-center justify-center">
               <img
                 // 2 ways for call images
-                src={`https://kopiku.up.railway.app/images/${dataProductDetails.images[0].filename}`}
+                src={`${process.env.REACT_APP_URL}/images/${dataProductDetails.images[0].filename}`}
                 // src={`https://kopiku.up.railway.app/images/${dataProductDetails.images ? dataProductDetails.images[0].filename : ""}`}
                 alt=""
                 className="rounded-full"

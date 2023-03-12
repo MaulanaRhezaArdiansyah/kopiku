@@ -25,7 +25,7 @@ export default function Profile() {
   });
   const [avatar, setAvatar] = useState("");
   const [preview, setPreview] = useState();
-  const URL = `https://kopiku.up.railway.app/api/v1/users/${userID}`;
+
   const handleEditProfile = (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -38,7 +38,7 @@ export default function Profile() {
 
     axios({
       method: "PATCH",
-      url: URL,
+      url: `${process.env.REACT_APP_URL}/api/v1/users/${userID}`,
       data: formData,
       headers: {
         "Content-Type": "multipart/form-data",

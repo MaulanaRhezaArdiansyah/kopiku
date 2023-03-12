@@ -7,7 +7,7 @@ const HistoryCard = () => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
   const userID = JSON.parse(localStorage.getItem("@userLogin")).user.id;
-  const URL = `https://kopiku.up.railway.app`;
+
   const [datas, setDatas] = useState([]);
   const [message, setMessage] = useState("");
   const [refetch, setRefetch] = useState(false);
@@ -16,7 +16,7 @@ const HistoryCard = () => {
       try {
         const response = await axios({
           method: "GET",
-          url: `${URL}/api/v1/history/62c0585b-327a-431e-aac8-692b9a2da3eb`,
+          url: `${process.env.REACT_APP_URL}/api/v1/history/62c0585b-327a-431e-aac8-692b9a2da3eb`,
         });
         setDatas(response.data.data);
       } catch (error) {
@@ -29,7 +29,7 @@ const HistoryCard = () => {
   const handleDeleteHistory = (historyID) => {
     axios({
       method: "DELETE",
-      url: `${URL}/api/v1/history/${userID}/${historyID}`,
+      url: `${process.env.REACT_APP_URL}/api/v1/history/${userID}/${historyID}`,
     })
       .then((result) => {
         alert(result.data.message);
@@ -51,7 +51,7 @@ const HistoryCard = () => {
             >
               <div className="w-20 h-20 md:max-lg:w-32 md:max-lg:h-32">
                 <img
-                  src={`${URL}/uploads/images/${item.images[0].filename}`}
+                  src={`${process.env.REACT_APP_URL}/uploads/images/${item.images[0].filename}`}
                   alt=""
                   className="w-full h-full rounded-full"
                 />

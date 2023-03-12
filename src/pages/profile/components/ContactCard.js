@@ -20,7 +20,7 @@ export const ContactCard = ({ datas, setData }) => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://kopiku.up.railway.app/api/v1/users/${userID}`,
+      url: `${process.env.REACT_APP_URL}/api/v1/users/${userID}`,
     })
       .then((res) => {
         setDataContact(res.data.data);

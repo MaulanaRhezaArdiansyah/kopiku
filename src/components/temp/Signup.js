@@ -23,7 +23,7 @@ const ContentSignup = () => {
     e.preventDefault();
     axios({
       method: "POST",
-      url: `https://kopiku.up.railway.app/api/v1/auth/register`,
+      url: `${process.env.REACT_APP_URL}/api/v1/auth/register`,
       data: signupData,
     })
       .then((res) => {

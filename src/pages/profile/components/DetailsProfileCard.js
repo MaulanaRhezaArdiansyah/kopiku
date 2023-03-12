@@ -26,7 +26,7 @@ export const DetailsProfileCard = ({ datas, setData }) => {
 
   useEffect(() => {
     axios
-      .get(`https://kopiku.up.railway.app/api/v1/users/${userID}`)
+      .get(`${process.env.REACT_APP_URL}/api/v1/users/${userID}`)
       .then((res) => {
         // console.log(res.data.data);
         setDataDetailsCard(res.data.data);

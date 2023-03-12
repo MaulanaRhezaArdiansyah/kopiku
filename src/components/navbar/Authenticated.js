@@ -22,12 +22,13 @@ export default function Authenticated({ setIsLogin, setKeyword, setRefetch }) {
     };
     getData();
   }, []);
-
+  // console.log(process.env.REACT_APP_URL);
   useEffect(() => {
     const getAvatar = async () => {
       try {
         const response = await axios.get(
-          `https://kopiku.up.railway.app/api/v1/users/${userID}`
+          // `https://kopiku.up.railway.app/api/v1/users/${userID}`
+          `${process.env.REACT_APP_URL}/api/v1/users/${userID}`
         );
         const data = response.data.data;
         setReget(!reget);
@@ -100,7 +101,8 @@ export default function Authenticated({ setIsLogin, setKeyword, setRefetch }) {
           className="w-8 h-8 rounded-full cursor-pointer border-zinc-500 duration-200"
         >
           <img
-            src={avatar && `https://kopiku.up.railway.app/images/${avatar}`}
+            // src={avatar && `https://kopiku.up.railway.app/images/${avatar}`}
+            src={avatar && `${process.env.REACT_APP_URL}/images/${avatar}`}
             alt=""
             className="rounded-full w-8 h-8"
           />

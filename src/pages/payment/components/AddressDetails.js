@@ -28,7 +28,7 @@ const AddressDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`https://kopiku.up.railway.app/api/v1/users/${userID}`)
+      .get(`${process.env.REACT_APP_URL}/api/v1/users/${userID}`)
       .then((res) => {
         setDataAddress(res.data.data);
       })

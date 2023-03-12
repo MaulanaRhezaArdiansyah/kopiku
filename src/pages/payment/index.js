@@ -10,7 +10,7 @@ import { TabTitle } from "../../utils/GeneralFunction";
 
 const Payment = () => {
   const navigate = useNavigate();
-  const URL = `https://kopiku.up.railway.app/`;
+
   const carts = JSON.parse(localStorage.getItem("@cart"));
   const userID = JSON.parse(localStorage.getItem("@userLogin")).user.id;
 
@@ -18,7 +18,7 @@ const Payment = () => {
     for (let i = 0; i < carts.length; i++) {
       axios({
         method: "POST",
-        url: `${URL}/api/v1/history/${userID}`,
+        url: `${process.env.REACT_APP_URL}/api/v1/history/${userID}`,
         data: {
           product_title: carts[i].titleCart,
           product_price: carts[i].priceCart,
